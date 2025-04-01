@@ -62,3 +62,24 @@ vector<int> biggest_divisible_conglomerate(vector<int> input) {
     reverse(result.begin(), result.end());  // Restore the original order
     return result;
 }
+
+
+/*
+
+- Time complexity of part 1 (recursive):
+
+The time complexity from the first part was  O(2^n). It is not as efficient as dynamic programming. 
+The recursive method tries all possible subsets, which means it explores every combination of elements.
+Since there are 2ⁿ possible subsets, the time complexity grows exponentially.
+This makes the recursive method impractical for large inputs, because it will become too slow and inneficient.
+
+
+
+- Time complexity of part 2 (D.P):
+
+The time complexity from this part is O(n^2). It is very efficient and barely took 3 seconds (2 seconds to be exact). 
+The algorithm uses two nested loops, meaning each element is compared with all previous ones.
+The outer loop iterates n times, and in the worst case, the inner loop also runs up to n times.
+Since each step only involves comparisons and updates, the overall time complexity is O(n²).
+*/
+
